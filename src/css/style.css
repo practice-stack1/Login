@@ -1,0 +1,191 @@
+.login-page-wrapp {
+  min-height: 100vh;
+}
+
+.login-form-wrap {
+  width: 50%;
+}
+
+.login-form-wrap .form-card {
+  max-width: 500px;
+  width: 100%;
+  margin-right: 30px;
+}
+
+.login-form-wrap .form-card .card-title {
+  color: var(--gray);
+}
+
+.login-greeting-screen {
+  background: var(--teal);
+  width: 50%;
+  padding: 20px;
+}
+
+.login-greeting-screen .login-greeting-screen-text {
+  max-width: 500px;
+}
+
+.login-greeting-screen .login-greeting-screen-text {
+  color: var(--white);
+}
+
+.login-greeting-screen .login-greeting-screen-title {
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+.login-greeting-screen .login-greeting-screen-description {
+  line-height: 1.4;
+}
+
+
+.card-tabs{
+  display: flex;
+}
+.card-tab{
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  vertical-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+.card-tab:first-child{
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
+}
+.card-tab._active{
+  border-bottom: none;
+}
+
+.card-body{
+  display: none;
+}
+.card-body._active{
+  display: block;
+}
+
+.login-form-wrap{
+  padding: 100px 0;
+}
+
+.login-greeting-screen,
+.form-card,
+.login-page-wrapp,
+.login-greeting-screen,
+.login-page-wrap
+{
+  transition: all 0.3s ease;
+}
+
+
+.login-page-wrapp{
+  display: flex;
+  position: relative;
+}
+.login-page-wrapp::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: var(--teal);
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+.login-page-wrapp._active::before{
+  opacity: 1;
+}
+
+.login-page-wrapp._active .login-form-wrap{
+  width: 100%;
+}
+.login-page-wrapp._active .form-card{
+  margin: 0 auto;
+  width: 80%;
+}
+.login-page-wrapp._active .form-card [name="authForm"]{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.login-page-wrapp._active .form-card [name="authForm"] .check-box{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.login-page-wrapp._active .form-card [name="authForm"] .check-box label{
+  margin: 0 10px 0 0;
+}
+.login-page-wrapp._active .form-card [name="authForm"] > label{
+  margin: 0 0 7px 0;
+}
+.login-page-wrapp._active .form-card [name="authForm"] > div{
+  width: 49%;
+  height: auto;
+}
+.login-page-wrapp._active .form-card [name="authForm"] > div.checkbox{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.login-greeting-screen._hide{
+  width: 0%;
+  padding: 0;
+}
+.login-greeting-screen._hide .login-greeting-screen-text{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.authorization input:not([type]),
+.authorization input[type=text]:not(.browser-default),
+.authorization input[type=password]:not(.browser-default),
+.authorization input[type=email]:not(.browser-default),
+.authorization input[type=url]:not(.browser-default),
+.authorization input[type=time]:not(.browser-default),
+.authorization input[type=date]:not(.browser-default),
+.authorization input[type=datetime]:not(.browser-default),
+.authorization input[type=datetime-local]:not(.browser-default),
+.authorization input[type=tel]:not(.browser-default),
+.authorization input[type=number]:not(.browser-default),
+.authorization input[type=search]:not(.browser-default),
+.authorization textarea.materialize-textarea{
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-sizing: border-box;
+}
+
+.authorization [type="radio"]:not(:checked),
+.authorization [type="radio"]:checked{
+  position: relative;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.authorization label{
+  font-size: 15px;
+  color: #393a3a;
+}
+
+.authorization .datepicker-modal{
+  height: auto;
+}
+
+
+
